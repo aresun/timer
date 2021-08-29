@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Time from "./cpt/Time";
+import DurationInput from "./cpt/DurationInput";
+// # hooks
+import { useApp } from "./hooks/app-hooks";
+
+let handler = null;
+const record_handler = function (handler_fn) {
+  handler = handler_fn;
+};
+const clicked_handler = () => {
+  handler();
+};
 
 function App() {
+  const [hour, minute] = useApp();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Time
+        hour={hour}
+        minute={minute}
+        clicked_handler={clicked_handler}
+      />
+      <DurationInput
+        hour={hour}
+        minute={minute}
+        record_handler={record_handler}
+      />
     </div>
   );
 }

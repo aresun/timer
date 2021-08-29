@@ -1,0 +1,38 @@
+.time {
+  text-align: center;
+  font-size: 22rem;
+  color: #ff005e;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 2rem;
+
+  user-select: none;
+  cursor: pointer;
+
+  transition: all 200ms ease;
+
+  padding: 1rem 6rem;
+
+  &:hover {
+    background-color: #6b29495e;
+  }
+
+  .hour,
+  .minute,
+  .delimeter {
+  }
+
+  .hour {
+  }
+  .delimeter {
+    color: #808080;
+    color: #ff007b5e;
+  }
+  .minute {
+    // color: #e8006b;
+  }
+}
