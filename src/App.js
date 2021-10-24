@@ -14,19 +14,7 @@ const clicked_handler = () => {
 function App() {
   const [hour, minute] = useApp();
 
-
-
-
-
-
-  
-
-
-
-  
-
   // # start
-
   return (
     <div className="App">
       <Time
@@ -34,6 +22,7 @@ function App() {
         minute={minute}
         clicked_handler={clicked_handler}
       />
+
       <DurationInput
         hour={hour}
         minute={minute}
